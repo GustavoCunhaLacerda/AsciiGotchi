@@ -114,20 +114,20 @@ programa.</p>
 
 ## TAREFAS ┌ (> _ <) ┘
 #### Base:
-- [ ] **Função Principal**
-- [ ] Informações do monstro
-- [ ] Tela com layout principal
-- [ ] Função de perda de status natural
-- [ ] Função com a animação base
+- [X] **Função Principal**
+- [x] Informações do monstro
+- [x] Tela com layout principal
+- [x] Função de perda de status natural
+- [x] Função com a animação base
 #### Escolhas:
-- [ ] Função para entrada no ramo de escolhas
-- [ ] Ramo de Comida
-- [ ] Ramo de Carinho
-- [ ] Ramo de Banho
-- [ ] Ramo de Ignorar
-- [ ] Ramo de Escolha Inexistente
+- [x] Função para entrada no ramo de escolhas
+- [x] Ramo de Comida
+- [x] Ramo de Carinho
+- [x] Ramo de Banho
+- [x] Ramo de Ignorar
+- [x] Ramo de Escolha Inexistente
 #### Morte:
-- [ ] Função para aglutinação de mortes
+- [x] Função para aglutinação de mortes
 - [ ] Ramo de morte por muita fome
 - [ ] Ramo de morte por comer muito
 - [ ] Ramo de morte por baixa felicidade (desgosto)
@@ -136,7 +136,7 @@ programa.</p>
 - [ ] Ramo de morte por muita higiene (sem anticorpos)
 - [ ] Ramo de morte por level máximo (Z)
 #### Opcional:
-- [ ] Animação diferente para movimento padrão com 3 estágios
+- [x] Animação diferente para movimento padrão com 3 estágios
 - [ ] Animações adicionais na hora da morte
 - [ ] Animações adicionais na hora das escolhas
  
