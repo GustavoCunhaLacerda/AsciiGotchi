@@ -15,9 +15,9 @@ ASCII (figura 2), variando de “@”, quando o monstrinho é apenas um ovo” a
 quando o monstrinho já é um senhor de idade pronto para partir…”.</p>
 
 
-## Especificações do projeto:
+## Especificações do projeto
 
-### Interface dom o usuário (TELA Padrão)
+### Interface dom o usuário (TELA Padrão):
 <p>A cada segundo, a tela deve ser atualizada mostrando:</p>
 <ul>
   <li> Nome, tempo de vida, o status fome, felicidade e higiene do monstrinho </li>
@@ -25,7 +25,7 @@ quando o monstrinho já é um senhor de idade pronto para partir…”.</p>
   <li> Opções do usuário: (1)Comida (2)Carinho (3)Banho (4).... </li>
 </ul>
 
-### Características do monstro ASCII
+### Características do monstro ASCII:
 <p>Todo monstro Ascii possui as seguintes características:</p>
 <ul>
   <li>Nome: a ser fornecido no começo do jogo</li>
@@ -38,6 +38,42 @@ quando o monstrinho já é um senhor de idade pronto para partir…”.</p>
       ○ Inicia-se com valor 10 e pode variar de 0 a 15</li>
   <li> Higiene: status que indica o grau de higiene do monstrinho</br>
       ○ Inicia-se com valor 10 e pode variar de 0 a 15</li>
-  <li>Grau de evolução: é indicado por 4 caracteres ASCII (bloco 2x2) variando de “@” a “Z” (é o próprio monstrinho)</li>
- 
+  <li>Grau de evolução: é indicado por 4 caracteres ASCII (bloco 2x2) variando de “@” a “Z” (é o próprio monstrinho</li>
 </ul>
+
+### Ações do usuário:
+<p>
+O usuário pode a cada 10 segundos agir com seu monstrinho selecionando
+alguma das seguintes opções:</p>
+<ol>
+  <li><b>Comida:</b> Fornece alimentação ao monstrinho</br>
+      a. Deve aparecer a mensagem: “<nomeMonstro> hora de
+comer!\n”, “Humm, que delícia mestre!\n”</br>
+      b. Esta ação diminui em 2 o grau de fome e diminui em 2 a higiene
+do monstrinho</li>
+  <li><b>Carinho:</b> Fornece felicidade ao monstrinho</br>
+      a. Deve aparecer a mensagem: “O carinho do mestre me faz bem
+:) \n”</br>
+      b. Esta ação aumenta em 3 ao grau de felicidade e aumenta em 1
+o grau de fome</li>
+  <li><b>Banho:</b> Limpa o monstrinho</br>
+      a. Deve aparecer a mensagem: “<nomeMonstro> hora do
+banho!\n”, “Naooooooo!\n”</br>
+      b. Esta ação aumenta em 7 o grau de higiene e diminui em 4 o
+grau de felicidade</li>
+  <li><b>… :</b> Ignora o monstro</br>
+      a. Basicamente esta ação não faz absolutamente nada</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
