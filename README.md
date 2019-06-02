@@ -17,7 +17,7 @@ quando o monstrinho já é um senhor de idade pronto para partir…”.</p>
 
 ## Especificações do projeto
 
-### Interface dom o usuário (TELA Padrão):
+### Interface com o usuário (TELA Padrão):
 <p>A cada segundo, a tela deve ser atualizada mostrando:</p>
 <ul>
   <li> Nome, tempo de vida, o status fome, felicidade e higiene do monstrinho </li>
