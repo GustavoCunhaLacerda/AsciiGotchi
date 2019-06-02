@@ -112,11 +112,34 @@ decrementado em 1).</p>
 <p>Nas situações de morte, além de exibir as mensagens acima, deve-se terminar o
 programa.</p>
 
-## TAREFAS
-#### Base
-- [ ] Informações do montro
+## TAREFAS ┌ (> _ <) ┘
+#### Base:
+- [ ] **Função Principal**
+- [ ] Informações do monstro
 - [ ] Tela com layout principal
-
+- [ ] Função de perda de status natural
+- [ ] Função com a animação base
+#### Escolhas:
+- [ ] Função para entrada no ramo de escolhas
+- [ ] Ramo de Comida
+- [ ] Ramo de Carinho
+- [ ] Ramo de Banho
+- [ ] Ramo de Ignorar
+- [ ] Ramo de Escolha Inexistente
+#### Morte:
+- [ ] Função para aglutinação de mortes
+- [ ] Ramo de morte por muita fome
+- [ ] Ramo de morte por comer muito
+- [ ] Ramo de morte por baixa felicidade (desgosto)
+- [ ] Ramo de morte por muita felicidade (rir muito)
+- [ ] Ramo de morte por baixa higiene (infecção)
+- [ ] Ramo de morte por muita higiene (sem anticorpos)
+- [ ] Ramo de morte por level máximo (Z)
+#### Opcional:
+- [ ] Animação diferente para movimento padrão com 3 estágios
+- [ ] Animações adicionais na hora da morte
+- [ ] Animações adicionais na hora das escolhas
+ 
 
 
 
