@@ -7,19 +7,17 @@ se fosse real, alimentando-o, dando-lhe carinho, limpando-o, dentre outras
 atividades. Além disso, o monstrinho virtual, ao longo do tempo, se
 desenvolve e vai envelhecendo. Caso o monstrinho não seja bem cuidado
 pelo seu dono, há uma possibilidade de que ele venha a falecer</p>
-![alt text](https://user-images.githubusercontent.com/48692606/58755974-2ffc5300-84c5-11e9-95ee-0a7f37c2b083.png)
 
-
-<h2>E o AsciiGotchi?</h2>
+## E o AsciiGotchi? 
 <p align="justify">Neste projeto criaremos uma versão simplificada de Tamagotchi chamada
 AsciiGotchi. Nosso monstrinho virtual será representado por um símbolo na tabela
 ASCII (figura 2), variando de “@”, quando o monstrinho é apenas um ovo” até “Z”,
 quando o monstrinho já é um senhor de idade pronto para partir…”.</p>
 
 
-<h2>Especificações do projeto:</h2>
+## Especificações do projeto:
 
-<h3>Interface dom o usuário(TELA Padrão)</h3>
+### Interface dom o usuário (TELA Padrão)
 <p>A cada segundo, a tela deve ser atualizada mostrando:</p>
 <ul>
   <li> Nome, tempo de vida, o status fome, felicidade e higiene do monstrinho </li>
