@@ -140,6 +140,10 @@ programa.</p>
 - [ ] Animações adicionais na hora da morte
 - [ ] Animações adicionais na hora das escolhas
  
+ 
+ ##### Agradecimentos Especiais
+ - Darla Ellen
+ - Henrique Tavares
 
 
 
