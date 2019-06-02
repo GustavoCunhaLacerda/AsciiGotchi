@@ -40,7 +40,6 @@ quando o monstrinho já é um senhor de idade pronto para partir…”.</p>
       ○ Inicia-se com valor 10 e pode variar de 0 a 15</li>
   <li>Grau de evolução: é indicado por 4 caracteres ASCII (bloco 2x2) variando de “@” a “Z” (é o próprio monstrinho<a/li>
 </ul>
-<img src=”https://http2.mlstatic.com/compre-1-leve-2-bichinho-virtual-tamagotchi-jogo-eletrnico-D_NQ_NP_711061-MLB29600405739_032019-F.jpg”>
   
 ### Ações do usuário:
 <p>
@@ -72,7 +71,51 @@ O usuário só poderá dar alguma ação novamente na próxima rodada (em 10
 segundos).</br>
 Obs.: o tempo é parado no momento em que o usuário precisa digitar alguma ação.</p>
 
+### Andamento do Jogo:
+<p align="justify">
+--> O jogo começa perguntando ao usuário “Qual o nome do monstrinho Ascii?”.
+Após isso, é apresentada a tela inicial com o monstrinho formado por um bloco 2x2
+com o caractere “@”, indicando que o monstrinho ainda é um ovo.</br></br>
+--> No 9° segundo de vida, o ovo deve eclodir, ou seja deve-se transformar o ovo
+em um bloco 2x2 de caracteres “A”. No próximo segundo (10º segundo de vida e em
+todos os múltiplos de 10 segundos) é dada a chance do usuário interagir com o
+monstrinho.</br></br>
+--> A cada ação do usuário, caso essa ação envolva a exibição de uma
+mensagem, essa mensagem deve ficar disponível por 2 segundos e depois sumir da
+tela (esses dois segundos devem ser atualizados na tela do jogo).</br></br>
+--> O monstrinho evolui a cada XX segundos, onde XX é o decimal
+correspondente ao caractere ASCII que ele é formado (ex.: o caractere ‘A’ é
+mapeado no decimal 65, ou seja, ele se tornará ‘B’ em 65 segundos). Ao evoluir,
+deve aparecer uma mensagem por dois segundos: “Parabéns <nomeMonstro>
+evoluiu!”</br></br>
+--> A cada 5 segundos (apenas depois de ter nascido) nosso monstrinho pode
+aleatoriamente: ficar com fome (grau de fome é incrementado em 1); ou ficar
+carente (grau de felicidade decrementado em 1); ou se sujar (grau de higiene
+decrementado em 1).</p>
+<p></br>==> Situações em que o monstrinho morre (“Game over!”):</p>
+<ul>
+  <li>“<nomeMonstro> morreu de fome! :( \n”</br>
+    ○ Ocorre quando o grau de fome chega a 15</li>
+  <li>“<nomeMonstro> morreu de bucho cheio!\n”</br>
+    ○ Ocorre quando o grau de fome chega a zero</li>
+  <li> “<nomeMonstro> morreu de desgosto =| \n”</br>
+    ○ Ocorre quando o grau de felicidade chega a zero</li>
+  <li>“<nomeMonstro> morreu de rir :D ops... :( \n”</br>
+    ○ Ocorre quando o grau de felicidade chega a 15</li>
+  <li>“<nomeMonstro> morreu de uma doença infecciosa! \n”</br>
+    ○ Ocorre quando o grau de higiene chega a 0</li>
+  <li>“<nomeMonstro> morreu por falta de anticorpos!\n”</br>
+    ○ Ocorre quando o grau de higiene chega a 15</li>
+  <li>“<nomeMonstro> teve uma bela vida :)”</br>
+    ○ Ocorre quando o monstro chegar ao estágio de evolução “Z”</li>
+</ul>
+<p>Nas situações de morte, além de exibir as mensagens acima, deve-se terminar o
+programa.</p>
 
+## TAREFAS
+#### Base
+- [ ] Informações do montro
+- [ ] Tela com layout principal
 
 
 
