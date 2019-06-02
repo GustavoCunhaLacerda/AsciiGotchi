@@ -1,12 +1,14 @@
 # AsciiGotchi  (¯ ▽ ¯) ノ
 
-<h2>O que é um Tamagotchi?</h2>
+## O que é um Tamagotchi?
 <p align="justify">O Tamagotchi®, é um brinquedo japonês lançado em 1996 pela Bandai©
 .A motivação deste brinquedo consiste em cuidar de um monstrinho virtual como
 se fosse real, alimentando-o, dando-lhe carinho, limpando-o, dentre outras
 atividades. Além disso, o monstrinho virtual, ao longo do tempo, se
 desenvolve e vai envelhecendo. Caso o monstrinho não seja bem cuidado
 pelo seu dono, há uma possibilidade de que ele venha a falecer</p>
+![alt text](https://user-images.githubusercontent.com/48692606/58755974-2ffc5300-84c5-11e9-95ee-0a7f37c2b083.png)
+
 
 <h2>E o AsciiGotchi?</h2>
 <p align="justify">Neste projeto criaremos uma versão simplificada de Tamagotchi chamada
