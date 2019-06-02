@@ -24,4 +24,20 @@ quando o monstrinho já é um senhor de idade pronto para partir…”.</p>
   <li> O monstrinho (formado por um bloco 2x2 usando o símbolo ASCII referente ao seu estágio de evolução </li>
   <li> Opções do usuário: (1)Comida (2)Carinho (3)Banho (4).... </li>
 </ul>
-<p>imagen here</p>
+
+### Características do monstro ASCII
+<p>Todo monstro Ascii possui as seguintes características:</p>
+<ul>
+  <li>Nome: a ser fornecido no começo do jogo</li>
+  <li>Tempo de vida: iniciado com zero no começo do jogo e alterado em uma unidade a cada segundo de jogo</br>
+      ○ Obs1.: Deve ser reiniciado no momento em que ovo nasce (o monstro se torna “A”)</br>
+      ○ Obs2.: Antes de nascer o tempo de vida aparece na tela com o termo “Tempo de gestação”</li>
+  <li>Fome: status que indica o grau de fome do monstrinho</br>
+      ○ Inicia-se com valor 10 e pode variar de 0 a 15</li>
+  <li>Felicidade: status que indica o grau de felicidade do monstrinho</br>
+      ○ Inicia-se com valor 10 e pode variar de 0 a 15</li>
+  <li> Higiene: status que indica o grau de higiene do monstrinho</br>
+      ○ Inicia-se com valor 10 e pode variar de 0 a 15</li>
+  <li>Grau de evolução: é indicado por 4 caracteres ASCII (bloco 2x2) variando de “@” a “Z” (é o próprio monstrinho)</li>
+ 
+</ul>
