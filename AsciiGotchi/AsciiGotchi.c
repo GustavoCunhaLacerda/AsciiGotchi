@@ -9,7 +9,7 @@
 int game = true;
 
 //INFORMAÇÕES DOBRE O TAMAGOTCHI
-int level_monstro = 64, xp_monstro = 55, fome = 10, felicidade = 10, higiene = 10;
+int level_monstro = 64, xp_monstro = 55, fome = 2, felicidade = 10, higiene = 10;
 int perda_status_natural;
 char nomeMonstro[25];
 
@@ -56,9 +56,23 @@ int func_perda_status_naturalemte() {
 
 //FUNÇÃO DE MOVIMENTAÇÃO
 int movimentacao() {
+    //RAMO DE "MOVIMENTAÇÃO" OVO
+    if ( (level_monstro == 64) && (game == true)) {
+            printf("\n\
+                ####################################\n\
+                # Nome: %-25s  #\n\
+                # Tempo de gestação: %-4i          #\n\
+                # Fome:%-2d Felicidade:%-2d Higiene:%-2d #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                %c%c                #\n\
+                #                %c%c                #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", nomeMonstro, tempo, fome, felicidade, higiene, level_monstro, level_monstro, level_monstro, level_monstro);
+    }
     //RAMO ANIMAÇÃO PADRÃO DE MOVIMENTO PT.1
-        if ( (tempo%2 == 0) && (game == true))
-        {
+    else if ( (tempo%2 == 0) && (game == true)) {
             printf("\n\
                 ####################################\n\
                 # Nome: %-25s  #\n\
@@ -71,14 +85,11 @@ int movimentacao() {
                 #                %c%c                #\n\
                 ####################################\n\
                 (1)comer (2)carinho (3)banho (4)...\n", nomeMonstro, tempo, fome, felicidade, higiene, level_monstro, level_monstro, level_monstro, level_monstro);
-        }
-
-        //RAMO ANIMAÇÃO PADRÃO DE MOVIMENTO PT.2
-        else if ( (tempo%2 != 0) && (game == true) )
-        {
+    }
+    //RAMO ANIMAÇÃO PADRÃO DE MOVIMENTO PT.2
+    else if ( (tempo%2 != 0) && (game == true) ) {
             movimento = rand()%2;
-            if (movimento == 0)
-            {
+            if (movimento == 0) {
             printf("\n\
                 ####################################\n\
                 # Nome: %-25s  #\n\
@@ -92,8 +103,7 @@ int movimentacao() {
                 ####################################\n\
                 (1)comer (2)carinho (3)banho (4)...\n", nomeMonstro, tempo, fome, felicidade, higiene, level_monstro, level_monstro, level_monstro, level_monstro);
             }
-            else
-            {
+            else {
                printf("\n\
                 ####################################\n\
                 # Nome: %-25s  #\n\
@@ -372,13 +382,8 @@ int escolhas() {
 //FUNÇÃO DE EVOLUÇÃO
 int evolution() {
         if ( (level_monstro == xp_monstro) && (level_monstro <= 90) && (game == true) ) {
-            xp_monstro = 0;
-            if (level_monstro == 90)
-            {
-                printf("nada");
-            }  
-            else
-            {
+            xp_monstro = 0;  
+            if (level_monstro != 90) {
                 system("clear");
                 printf("\n\
                 ####################################\n\
@@ -511,12 +516,459 @@ int evolution() {
                 sleep(1);
             }
         }
-
     return 0;
 }
 
 //FUNÇÃO DE MORTES
 int mortes() {
+        //RAMO DE MORTE POR MUITA FOME
+        if (fome >= 15) {
+                system("clear"); 
+                printf("\n\
+            ####################################\n\
+            #                                  #\n\
+            #                                  #\n\
+            #                                  #\n\
+            #                                  #\n\
+            #                                  #\n\
+            #                                  #\n\
+            #                %c%c                #\n\
+            #                %c%c                #\n\
+            ####################################\n\
+            (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro);
+                sleep(2);
+                system("clear"); 
+                printf("\n\
+            ####################################\n\
+            #                                  #\n\
+            #                                  #\n\
+            #                                  #\n\
+            #                                  #\n\
+            #                                  #\n\
+            #                                  #\n\
+            #                %c                 #\n\
+            #                %c                 #\n\
+            ####################################\n\
+            (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro);
+                sleep(1);
+                system("clear"); 
+                printf("\n\
+            ####################################\n\
+            #                                  #\n\
+            #                                  #\n\
+            #     Morreu de fome!              #\n\
+            #                                  #\n\
+            #                                  #\n\
+            #                                  #\n\
+            #                %c                 #\n\
+            #                %c                 #\n\
+            ####################################\n\
+            (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro);
+            sleep(2);
+            game = false;
+        }
+        //RAMO DE MORTE POR POUCA FOME 
+        else if (fome <= 0) {
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                %c%c                #\n\
+                #                %c%c                #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro);
+                sleep(2);
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                %c%c%c               #\n\
+                #                %c%c%c               #\n\
+                #                %c%c%c               #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro);
+                sleep(1);
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #               %c%c%c%c               #\n\
+                #               %c%c%c%c               #\n\
+                #               %c%c%c%c               #\n\
+                #               %c%c%c%c               #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro);
+                sleep(1);
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #       %c    %c     %c    %c          #\n\
+                #                                  #\n\
+                #    %c   %c            %c    %c       #\n\
+                #              %c  %c                #\n\
+                #              %c  %c                #\n\
+                #    %c   %c            %c    %c       #\n\
+                #                                  #\n\
+                #       %c    %c     %c    %c          #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro);   
+                sleep(0.5);
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n");
+                sleep(1);
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #       %c    %c     %c    %c          #\n\
+                #                                  #\n\
+                #    %c   %c            %c    %c       #\n\
+                #              %c  %c                #\n\
+                #              %c  %c                #\n\
+                #    %c   %c            %c    %c       #\n\
+                #                                  #\n\
+                #       %c    %c     %c    %c          #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro);   
+                sleep(1);
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n");
+                sleep(1);
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #       %c    %c     %c    %c          #\n\
+                #                                  #\n\
+                #    %c   %c            %c    %c       #\n\
+                #              %c  %c                #\n\
+                #              %c  %c                #\n\
+                #    %c   %c            %c    %c       #\n\
+                #                                  #\n\
+                #       %c    %c     %c    %c          #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro, level_monstro);   
+                sleep(2);
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #                                  #\n\
+                #     Morreu de bucho cheio!       #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n");
+                sleep(2);
+                game = false;
+        }
+        //RAMO DE MORTE POR BAIXA HIGIENE 
+        else if (higiene <= 0) {
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #   Morreu de doença infecciosa!   #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                %c%c                #\n\
+                #                %c%c                #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro);
+                sleep(1);
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #   Morreu de doença infecciosa!   #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                %c%c                #\n\
+                #                %c%c                #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro);
+                sleep(1);
+                game = false;
+        }
+        //RAMO DE MORTE POR HIGIENE ALTA
+        else if (higiene >= 15) {
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                # Morreu por falta de anticorpos!  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                %c%c                #\n\
+                #                %c%c                #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro);
+                sleep(1);
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                # Morreu por falta de anticorpos!  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                %c%c                #\n\
+                #                %c%c                #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro);
+                sleep(1);
+                game = false;
+        }
+        //RAMO MORTE POR TRISTEZA (FELICIDADE BAIXA)
+        else if (felicidade <= 0) {
+                    system("clear"); 
+                    printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                   ç.ç            #\n\
+                #                                  #\n\
+                #                %c%c                #\n\
+                #                %c%c                #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro);
+                    sleep(2);
+                    system("clear"); 
+                    printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #     ç.ç                          #\n\
+                #                         ç.ç      #\n\
+                #                                  #\n\
+                #                   ç.ç            #\n\
+                #                                  #\n\
+                #      ç.ç       %c%c                #\n\
+                #                %c%c                #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro);
+                    sleep(2);
+                    system("clear"); 
+                    printf("\n\
+                ####################################\n\
+                #           ç.ç      ç.ç           #\n\
+                #     ç.ç                   ç.ç    #\n\
+                #               ç.ç       ç.ç      #\n\
+                #      ç.ç                         #\n\
+                # ç.ç               ç.ç            #\n\
+                #           ç.ç             ç.ç    #\n\
+                #      ç.ç       %c%c                #\n\
+                #                %c%c     ç.ç        #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro);
+                    sleep(2);
+                    system("clear"); 
+                    printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #      Morreu de desgosto! =|      #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n");
+                    sleep(1);
+                    system("clear"); 
+                    printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #      Morreu de desgosto! =|      #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n");
+                sleep(1);
+                game = false;
+        }
+        //RRAMO DE MORTE POR MUITA FELICIDADE
+        else if (felicidade >= 15) {
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #                    HA!           #\n\
+                #                  /               #\n\
+                #                %c%c                #\n\
+                #                %c%c                #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                ####################################\n\
+                ", level_monstro, level_monstro, level_monstro, level_monstro);   
+                sleep(1);
+                system("clear");
+
+            printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #                    HAHA!         #\n\
+                #                  /               #\n\
+                #                %c%c                #\n\
+                #                %c%c                #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                ####################################\n\
+                ", level_monstro, level_monstro, level_monstro, level_monstro);   
+                sleep(1);
+                system("clear");
+
+            printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #                    HAHAHA!       #\n\
+                #                  /               #\n\
+                #                %c%c                #\n\
+                #                %c%c                #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                ####################################\n\
+                ", level_monstro, level_monstro, level_monstro, level_monstro);   
+                sleep(1);
+                system("clear");
+
+            printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #      Muito tempo depois...       #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                ####################################\n");   
+                sleep(2);
+                system("clear");
+            printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #                    HAHAHAHAHAHA  #\n\
+                #                  / HAHAHAHAHAHA  #\n\
+                #                %c%c  HAHAHAHAHAHA  #\n\
+                #                %c%c  HAHAHAHAHAHA  #\n\
+                #                    HAHAHAHAHAHA  #\n\
+                #                    HAHAHAHAHAHA! #\n\
+                #                                  #\n\
+                ####################################\n\
+                ", level_monstro, level_monstro, level_monstro, level_monstro);   
+                sleep(2);
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #    Morreu de rir :D ops... :(    #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                ####################################\n");   
+                sleep(1);
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #    Morreu de rir :D ops... :(    #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                ####################################\n");   
+                sleep(1);
+                game = false;
+        }
+        //RAMO DE MORTE POR LVL MÁXIMO
+        else if (level_monstro == 90) {
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #       Teve uma bela vida!        #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                %c%c                #\n\
+                #                %c%c                #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro);
+                sleep(1);
+                system("clear");
+                printf("\n\
+                ####################################\n\
+                #                                  #\n\
+                #       Teve uma bela vida!        #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                                  #\n\
+                #                %c%c                #\n\
+                #                %c%c                #\n\
+                ####################################\n\
+                (1)comer (2)carinho (3)banho (4)...\n", level_monstro, level_monstro, level_monstro, level_monstro);
+                sleep(1);
+                game = false;
+        }
     return 0;
 }
 
@@ -541,10 +993,11 @@ int main() {
         system("clear");
 
         func_perda_status_naturalemte();
+        mortes();
         escolhas();
+        mortes();
         movimentacao();
         evolution();
-
 
         sleep(1);
         xp_monstro++;
