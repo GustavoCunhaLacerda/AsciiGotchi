@@ -128,20 +128,23 @@ programa.</p>
 - [x] Ramo de Escolha Inexistente
 #### Morte:
 - [x] Função para aglutinação de mortes
-- [ ] Ramo de morte por muita fome
-- [ ] Ramo de morte por comer muito
-- [ ] Ramo de morte por baixa felicidade (desgosto)
-- [ ] Ramo de morte por muita felicidade (rir muito)
-- [ ] Ramo de morte por baixa higiene (infecção)
-- [ ] Ramo de morte por muita higiene (sem anticorpos)
-- [ ] Ramo de morte por level máximo (Z)
+- [x] Ramo de morte por muita fome
+- [x] Ramo de morte por comer muito
+- [x] Ramo de morte por baixa felicidade (desgosto)
+- [x] Ramo de morte por muita felicidade (rir muito)
+- [x] Ramo de morte por baixa higiene (infecção)
+- [x] Ramo de morte por muita higiene (sem anticorpos)
+- [x] Ramo de morte por level máximo (Z)
 #### Opcional:
 - [x] Animação diferente para movimento padrão com 3 estágios
 - [ ] Animações adicionais na hora da morte
 - [ ] Animações adicionais na hora das escolhas
+#### Acabamento
+- [ ] Testes
+- [ ] Ajustes
+- [ ] Polimento final
  
- 
- ### Agradecimentos Especiais
+ ### Agradecimentos Especiais (Outros Membros do Grupo)
  - Darla Ellen Santos (IFB)
  - Henrique Tavares Aguiar (IFB)
  
