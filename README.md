@@ -38,9 +38,10 @@ quando o monstrinho já é um senhor de idade pronto para partir…”.</p>
       ○ Inicia-se com valor 10 e pode variar de 0 a 15</li>
   <li> Higiene: status que indica o grau de higiene do monstrinho</br>
       ○ Inicia-se com valor 10 e pode variar de 0 a 15</li>
-  <li>Grau de evolução: é indicado por 4 caracteres ASCII (bloco 2x2) variando de “@” a “Z” (é o próprio monstrinho</li>
+  <li>Grau de evolução: é indicado por 4 caracteres ASCII (bloco 2x2) variando de “@” a “Z” (é o próprio monstrinho<a/li>
 </ul>
-
+<img src=”https://http2.mlstatic.com/compre-1-leve-2-bichinho-virtual-tamagotchi-jogo-eletrnico-D_NQ_NP_711061-MLB29600405739_032019-F.jpg”>
+  
 ### Ações do usuário:
 <p>
 O usuário pode a cada 10 segundos agir com seu monstrinho selecionando
@@ -64,6 +65,12 @@ grau de felicidade</li>
   <li><b>… :</b> Ignora o monstro</br>
       a. Basicamente esta ação não faz absolutamente nada</li>
 </ol>
+<p align="justify">Caso o usuário digite outra opção, deve-se exibir a mensagem “O que foi isso
+mestre?! O que queria de mim?” e reduzir 5 pontos do grau felicidade do
+monstrinho.</br>
+O usuário só poderá dar alguma ação novamente na próxima rodada (em 10
+segundos).</br>
+Obs.: o tempo é parado no momento em que o usuário precisa digitar alguma ação.</p>
 
 
 
