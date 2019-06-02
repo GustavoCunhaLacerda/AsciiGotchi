@@ -6,7 +6,7 @@
 se fosse real, alimentando-o, dando-lhe carinho, limpando-o, dentre outras
 atividades. Além disso, o monstrinho virtual, ao longo do tempo, se
 desenvolve e vai envelhecendo. Caso o monstrinho não seja bem cuidado
-pelo seu dono, há uma possibilidade de que ele venha a falecer</p>
+pelo seu dono, há uma possibilidade de que ele venha a falecer.</p>
 
 ## E o AsciiGotchi? 
 <p align="justify">Neste projeto criaremos uma versão simplificada de Tamagotchi chamada
