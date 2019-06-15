@@ -137,12 +137,12 @@ programa.</p>
 - [x] Ramo de morte por level máximo (Z)
 #### Opcional:
 - [x] Animação diferente para movimento padrão com 3 estágios
-- [ ] Animações adicionais na hora da morte
-- [ ] Animações adicionais na hora das escolhas
+- [x] Animações adicionais na hora da morte
+- [x] Animações adicionais na hora das escolhas
 #### Acabamento
-- [ ] Testes
-- [ ] Ajustes
-- [ ] Polimento final
+- [x] Testes
+- [x] Ajustes
+- [x] Polimento final
  
  ### Agradecimentos Especiais (Outros Membros do Grupo)
  - Darla Ellen Santos (IFB)
