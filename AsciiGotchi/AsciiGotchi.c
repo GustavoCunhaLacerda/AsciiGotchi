@@ -11,7 +11,7 @@ int jogo, instrucoes, creditos, sobre, tela_inicial = true;
 //Controle do loop enquanto ovo
 int ovo = true;
 
-//Status do Asciigotchi
+//Stauts do Asciigotchi
 int level_monstro = 64, xp_monstro = 0;
 int fome = 10, felicidade = 10, higiene = 10;
 char nome[25];
@@ -1585,5 +1585,3 @@ int main()
     printf("\n");
     return 0;
 }
-
-
