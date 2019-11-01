@@ -1,4 +1,5 @@
 # AsciiGotchi  (¯ ▽ ¯) ノ
+![](https://github.com/GustavoCunhaLacerda/AsciiGotchi/blob/master/AsciiGotchi/AsciiGotchi.gif)
 
 ## O que é um Tamagotchi?
 <p align="justify">O Tamagotchi®, é um brinquedo japonês lançado em 1996 pela Bandai©
